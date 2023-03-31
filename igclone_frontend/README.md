@@ -1,2 +1,3 @@
-# Getting Started with Create React App
-Instagram Clone
+# Instagram Clone
+Anthony Shedeur Barker
+10981589
