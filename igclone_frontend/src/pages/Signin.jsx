@@ -7,6 +7,7 @@ const facebook = require("../assets/facebook.png");
 const iglogo = require("../assets/ig-logo.png");
 
 export const Signin = () => {
+
     return (
         <div className="pb-10 container center mx-auto mt-5">
             <div className="flex flex-col  w-full">
@@ -58,7 +59,7 @@ export const Signin = () => {
                     <p>
                         <span className="text-sm">Don't have an account? </span>
                         <span className="sign-up-span text-sky-600 font-bold text-sm">
-                            <Link to="SignUp">Sign up</Link>
+                            <Link to="/signup">Sign up</Link>
                         </span>
                     </p>
                 </div>

@@ -1,12 +1,16 @@
 import React from "react";
 import "../index.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const appStore = require("../assets/appStore.png");
 const playStore = require("../assets/playStore.png");
-const facebook = require("../assets/facebook.png");
 const iglogo = require("../assets/ig-logo.png");
 
 const SignUp = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("./Signin.jsx");
+    };
     return (
         <div className="pb-10 container center mx-auto mt-5">
             <div className="flex flex-col  w-full">
@@ -18,11 +22,41 @@ const SignUp = () => {
                             className="instagram-logo"
                         />
                     </div>
+                    <div
+                        className="mx-auto text-center mb-4 text-lg font-bold text-gray"
+                        style={{ fontFamily: "Segoe UI" }}
+                    >
+                        Sign Up to see photos and videos from your friends.
+                    </div>
+                    <div className="login-button-box mt-2 mx-auto">
+                        <button className="login-button h-10 border rounded-lg">
+                            Log in with Facebook
+                        </button>
+                    </div>
+                    <div className="lines-box">
+                        <div className="line-1"></div>
+                        <div className="or-box">OR</div>
+                        <div className="line-2"></div>
+                    </div>
                     <div className="mx-auto mt-1">
                         <input
                             className="text-sm border-gray-light bg-neutral-200"
                             type="text"
-                            placeholder="Phone number, username or email"
+                            placeholder="Phone number or Email"
+                        />
+                    </div>
+                    <div className="mx-auto mt-1">
+                        <input
+                            className="text-sm border-gray-light bg-neutral-200"
+                            type="text"
+                            placeholder="Full Name"
+                        />
+                    </div>
+                    <div className="mx-auto mt-1">
+                        <input
+                            className="text-sm border-gray-light bg-neutral-200"
+                            type="text"
+                            placeholder="Username"
                         />
                     </div>
                     <div className="mx-auto mt-3">
@@ -32,33 +66,27 @@ const SignUp = () => {
                             placeholder="Password"
                         />
                     </div>
+                    <div className="text-xs">
+                        <p className=" mt-4 text-center">
+                            People who use our service may have uploaded your
+                            contact information. Learn More
+                        </p>
+                        <p className="mt-4 text-center">
+                            By signing up, you agree to our Terms, Policy
+                        </p>
+                        <p>
+                            <Link>Policy</Link> and <Link>Cookies Policy.</Link>
+                        </p>
+                    </div>
                     <div className="login-button-box mt-2 mx-auto">
-                        <button className="login-button">Login</button>
-                    </div>
-                    <div className="lines-box">
-                        <div className="line-1"></div>
-                        <div className="or-box">OR</div>
-                        <div className="line-2"></div>
-                    </div>
-                    <div className="fb-box">
-                        <span>
-                            <img
-                                src={facebook}
-                                alt="facebook"
-                                className="facebook-logo"
-                            />
-                        </span>
-                        <p className="fb-link">Log in with Facebook</p>
-                    </div>
-                    <div className="mx-auto text-sm mt-5">
-                        <p className="text-xs">Forgotten your password?</p>
+                        <button className="login-button">Sign up</button>
                     </div>
                 </div>
                 <div className="flex flex-col mx-auto mt-3 border rounded-sm border-gray-light pl-4 pr-4 pb-4 pt-4 w-80">
-                    <p>
-                        <span className="text-sm">Don't have an account? </span>
+                    <p className="text-center">
+                        <span className="text-sm">Have an account? </span>
                         <span className="sign-up-span text-sky-600 font-bold text-sm">
-                            <Link to="SignUp">Sign up</Link>
+                            <Link to="/signin">Login</Link>
                         </span>
                     </p>
                 </div>

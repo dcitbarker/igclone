@@ -8,9 +8,9 @@ export const App = () => {
     return (
         <>
             <Routes>
-                <Route path="/" element={<Signin />} />
-                <Route path="signup" element={<SignUp />} />
-                <Route path="home" element={<Home />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/signin" element={<Signin />} />
+                <Route path="/signup" element={<SignUp />} />
             </Routes>
         </>
     );
