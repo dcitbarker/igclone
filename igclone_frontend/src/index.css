@@ -142,11 +142,6 @@ code {
     font-size: 14px;
     cursor: pointer;
   }
-  
-  .forgotten-password-link {
-    color: #385185;
-    font-size: 13px;
-  }
 
 
 @tailwind base;

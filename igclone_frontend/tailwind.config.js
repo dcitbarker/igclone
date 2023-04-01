@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -32,6 +33,9 @@ module.exports = {
             },
             borderRadius: {
                 "4xl": "2rem",
+            },
+            colors: {
+                sky: colors.sky,
             },
         },
     },
